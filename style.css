@@ -284,7 +284,7 @@ header.sticky {
 .cart img {
     width: 380px;
     height: auto;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .cart img:hover {
