@@ -1,0 +1,472 @@
+.accessibility-menu {
+    position: fixed;
+    right: 20px;
+    top: 50vh;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+}
+
+.accessibility-toggle {
+    background: transparent;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #4CAF50;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.accessibility-toggle:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.accessibility-content {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 250px;
+    display: none;
+}
+
+.accessibility-content.active {
+    display: block;
+}
+
+.accessibility-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.accessibility-header h3 {
+    margin: 0;
+    color: #333;
+}
+
+.close-accessibility {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.accessibility-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accessibility-options button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accessibility-options button:hover {
+    background: #e0e0e0;
+}
+
+/* Estilos para modo escuro */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Header no modo escuro */
+body.dark-mode #navbar {
+    background-color: #2d2d2d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .navmenu a {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-icon i {
+    color: #ffffff;
+}
+
+/* Cards e produtos no modo escuro */
+body.dark-mode .row {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode .price h4,
+body.dark-mode .price p {
+    color: #ffffff;
+}
+
+/* Formulários no modo escuro */
+body.dark-mode .login-box,
+body.dark-mode .signup-box {
+    background-color: #2d2d2d;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .input-container input {
+    background-color: #404040;
+    color: #ffffff;
+    border-color: #505050;
+}
+
+body.dark-mode .input-container input::placeholder {
+    color: #aaaaaa;
+}
+
+body.dark-mode .input-container label {
+    color: #ffffff;
+}
+
+/* Botões no modo escuro */
+body.dark-mode button {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+body.dark-mode button:hover {
+    background-color: #45a049;
+}
+
+/* Links no modo escuro */
+body.dark-mode a {
+    color: #4CAF50;
+}
+
+body.dark-mode a:hover {
+    color: #45a049;
+}
+
+/* Carrinho de compras no modo escuro */
+body.dark-mode .cart-items {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode .cart-item {
+    border-bottom-color: #404040;
+}
+
+body.dark-mode .cart-summary {
+    background-color: #2d2d2d;
+}
+
+/* Busca no modo escuro */
+body.dark-mode .search-input {
+    background-color: #404040;
+    color: #ffffff;
+    border-color: #505050;
+}
+
+body.dark-mode .product-card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+/* Seção de contato no modo escuro */
+body.dark-mode .contact {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .contact-info {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .social-icon i {
+    color: #ffffff;
+}
+
+/* Footer no modo escuro */
+body.dark-mode .end-text {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+
+/* Menu de acessibilidade no modo escuro */
+body.dark-mode .accessibility-content {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode .accessibility-options button {
+    background-color: #404040;
+    color: #ffffff;
+}
+
+body.dark-mode .accessibility-options button:hover {
+    background-color: #505050;
+}
+
+/* Textos e títulos no modo escuro */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ffffff;
+}
+
+/* Elementos específicos da home no modo escuro */
+body.dark-mode .main-text h5 {
+    color: #4CAF50;
+}
+
+body.dark-mode .center-text span {
+    color: #4CAF50;
+}
+
+/* Reviews no modo escuro */
+body.dark-mode .reviews {
+    background-color: #2d2d2d;
+}
+
+/* Update news no modo escuro */
+body.dark-mode .update-cart .cart {
+    background-color: #2d2d2d;
+}
+
+/* Ajustes para elementos com hover no modo escuro */
+body.dark-mode .navmenu a:hover {
+    color: #4CAF50;
+}
+
+body.dark-mode .nav-icon i:hover {
+    color: #4CAF50;
+}
+
+/* Estilos para alto contraste */
+body.high-contrast {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast p,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast h6,
+body.high-contrast span,
+body.high-contrast label {
+    color: #ffffff !important;
+}
+
+body.high-contrast #navbar {
+    background-color: #000000 !important;
+    border-bottom: 1px solid #ffffff !important;
+}
+
+body.high-contrast .navmenu a,
+body.high-contrast .nav-icon i,
+body.high-contrast .nav-icon a {
+    color: #ffffff !important;
+}
+
+body.high-contrast .navmenu a:hover,
+body.high-contrast .nav-icon i:hover,
+body.high-contrast .nav-icon a:hover {
+    color: #ffff00 !important;
+}
+
+body.high-contrast button,
+body.high-contrast .main-btn,
+body.high-contrast .checkout-btn {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+body.high-contrast button:hover,
+body.high-contrast .main-btn:hover,
+body.high-contrast .checkout-btn:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+body.high-contrast input,
+body.high-contrast textarea,
+body.high-contrast select {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+body.high-contrast input::placeholder {
+    color: #cccccc !important;
+}
+
+body.high-contrast .cart-items,
+body.high-contrast .cart-summary,
+body.high-contrast .product-card,
+body.high-contrast .login-box,
+body.high-contrast .signup-box {
+    background-color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+body.high-contrast .contact,
+body.high-contrast .reviews,
+body.high-contrast .update-cart .cart {
+    background-color: #000000 !important;
+    border: 1px solid #ffffff !important;
+}
+
+body.high-contrast .end-text {
+    background-color: #000000 !important;
+    border-top: 1px solid #ffffff !important;
+}
+
+body.high-contrast .accessibility-content {
+    background-color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+body.high-contrast .accessibility-options button {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+body.high-contrast .accessibility-options button:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Links em alto contraste */
+body.high-contrast a {
+    color: #ffff00 !important;
+    text-decoration: underline !important;
+}
+
+body.high-contrast a:hover {
+    color: #ffffff !important;
+}
+
+/* Preços e elementos importantes */
+body.high-contrast .price h4,
+body.high-contrast .price p,
+body.high-contrast .main-text h5,
+body.high-contrast .center-text span {
+    color: #ffff00 !important;
+}
+
+/* Preservar imagens */
+body.high-contrast img {
+    /* Não aplicar filtros nas imagens */
+    filter: none !important;
+}
+
+/* Bordas para melhor distinção de elementos */
+body.high-contrast .row,
+body.high-contrast .cart-item {
+    border: 1px solid #ffffff !important;
+    margin: 5px 0 !important;
+}
+
+/* Estilos para os novos botões */
+#toggle-language,
+#toggle-libras {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#toggle-language:hover,
+#toggle-libras:hover {
+    background: #e0e0e0;
+}
+
+/* Estilos para o widget do VLibras */
+.vw-text {
+    position: fixed !important;
+    right: 20px !important;
+    bottom: 20px !important;
+    z-index: 9999 !important;
+}
+
+/* Esconder elementos do Google Translate */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+#google_translate_element {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9998;
+}
+
+.goog-te-gadget {
+    font-family: inherit !important;
+}
+
+/* Estilos para VLibras */
+.enabled {
+    position: fixed !important;
+    z-index: 9999 !important;
+}
+
+.access-button {
+    right: 20px !important;
+    bottom: 20px !important;
+}
+
+/* Estilos para Google Translate */
+#google_translate_element {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    font-family: inherit !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    color: #333 !important;
+}
+
+.dark-mode .goog-te-gadget-simple {
+    color: #fff !important;
+}
+ 

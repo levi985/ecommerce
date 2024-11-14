@@ -17,9 +17,80 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="accessibility.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Script do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </head>
 
 <body>
+<!-- Elemento do VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Elemento do Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <!-- Inicialização do VLibras -->
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Menu de Acessibilidade -->
+    <div id="accessibility-menu" class="accessibility-menu">
+        <button class="accessibility-toggle" aria-label="Abrir menu de acessibilidade">
+            <i class='bx bx-universal-access'></i>
+        </button>
+        <div class="accessibility-content">
+            <div class="accessibility-header">
+                <h3>Acessibilidade</h3>
+                <button class="close-accessibility" aria-label="Fechar menu de acessibilidade">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="accessibility-options">
+                <button id="increase-text" aria-label="Aumentar texto">
+                    <i class='bx bx-zoom-in'></i> Aumentar Texto
+                </button>
+                <button id="decrease-text" aria-label="Diminuir texto">
+                    <i class='bx bx-zoom-out'></i> Diminuir Texto
+                </button>
+                <button id="toggle-contrast" aria-label="Alto contraste">
+                    <i class='bx bx-adjust'></i> Alto Contraste
+                </button>
+                <button id="toggle-dark-mode" aria-label="Modo escuro">
+                    <i class='bx bx-moon'></i> Modo Escuro
+                </button>
+                <button id="reset-accessibility" aria-label="Resetar configurações">
+                    <i class='bx bx-reset'></i> Resetar
+                </button>
+                <button id="toggle-language" aria-label="Alternar idioma"></button>
+                    <i class='bx bx-globe'></i> Traduzir Site
+                </button>
+                <button id="toggle-libras" aria-label="Tradutor de Libras">
+                    <i class='bx bx-conversation'></i> VLibras
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div class="signup-body">
         <div class="body-form">
             <div class="container">
@@ -107,6 +178,7 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="accessibility.js"></script>
 </body>
 
 </html>
