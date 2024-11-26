@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce</title>
-    <!-- CSS-link -->   
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,23 +18,95 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Script do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </head>
 
 <body>
+    <!-- Menu de Acessibilidade -->
+     <!-- Elemento do VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Elemento do Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <!-- Inicialização do VLibras -->
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Menu de Acessibilidade (que já existe) -->
+    <div id="accessibility-menu" class="accessibility-menu">
+        <!-- ... resto do menu ... -->
+    </div>
+    <div id="accessibility-menu" class="accessibility-menu">
+        <button class="accessibility-toggle" aria-label="Abrir menu de acessibilidade">
+            <i class='bx bx-universal-access'></i>
+        </button>
+        <div class="accessibility-content">
+            <div class="accessibility-header">
+                <h3>Acessibilidade</h3>
+                <button class="close-accessibility" aria-label="Fechar menu de acessibilidade">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            
+            <div class="accessibility-options">
+                <button id="increase-text" aria-label="Aumentar texto">
+                    <i class='bx bx-zoom-in'></i> Aumentar Texto
+                </button>
+                <button id="decrease-text" aria-label="Diminuir texto">
+                    <i class='bx bx-zoom-out'></i> Diminuir Texto
+                </button>
+                <button id="toggle-contrast" aria-label="Alto contraste">
+                    <i class='bx bx-adjust'></i> Alto Contraste
+                </button>
+                <button id="toggle-dark-mode" aria-label="Modo escuro">
+                    <i class='bx bx-moon'></i> Modo Escuro
+                </button>
+                <button id="reset-accessibility" aria-label="Resetar configurações">
+                    <i class='bx bx-reset'></i> Resetar
+                </button>
+                <button id="toggle-language" aria-label="Alternar idioma">
+                    <i class='bx bx-globe'></i> Traduzir Site
+                </button>
+                <button id="toggle-libras" aria-label="Tradutor de Libras">
+                    <i class='bx bx-conversation'></i> VLibras
+                </button>
+            </div>
+        </div>
+    </div>
 
     <header id="navbar">
         <a href="#" class="logo"><img src="imagem/logo.png" alt=""></a>
 
         <ul class="navmenu">
             <li><a href="index.html">home</a></li>
-            <li><a href="plantas.html">Flores</a></li>
-            <li><a href="#">contato</a></li>
+            <li><a href="plantas.html">flores</a></li>
+            <li><a href="contato.html">contato</a></li>
         </ul>
 
         <div class="nav-icon">
-            <a href="#"><i class='bx bx-search'></i></a>
+            <a href="busca.html"><i class='bx bx-search'></i></a>
             <a href="login.html"><i class='bx bx-user'></i></a>
-            <a href="#"><i class='bx bx-cart'></i></a>
+            <a href="carrinho.html"><i class='bx bx-cart'></i></a>
 
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
@@ -63,7 +134,7 @@
 
         <div class="products">
             <div class="row">
-                <a href="produto1.html"><img src="imagem/1.jpg" alt=""></a>
+                <a href="/pagProdutos/produto1.html"><img src="imagem/1.jpg" alt=""></a>
                 <div class="product-text">
                     <h5>Oferta</h5> 
                 </div>
@@ -338,6 +409,7 @@
     <div class="end-text">
         <p>Copyright © @2024. Todos os direitos reservados. Projetado por Kauã Júlio.</p>
     </div>
+    
 
 
 
@@ -345,6 +417,7 @@
 
 
     <script src="java.js"></script>
+    <script src="accessibility.js"></script>
 
 </body>
 
