@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Script do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <style>
+        .cart-container {
+            margin-top: 100px;
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cart-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cart-items {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+        }
+
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            padding: 5px 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .cart-summary {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Elemento do VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Elemento do Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <!-- Inicialização do VLibras -->
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Menu de Acessibilidade -->
+    <div id="accessibility-menu" class="accessibility-menu">
+        <button class="accessibility-toggle" aria-label="Abrir menu de acessibilidade">
+            <i class='bx bx-universal-access'></i>
+        </button>
+        <div class="accessibility-content">
+            <div class="accessibility-header">
+                <h3>Acessibilidade</h3>
+                <button class="close-accessibility" aria-label="Fechar menu de acessibilidade">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="accessibility-options">
+                <button id="increase-text" aria-label="Aumentar texto">
+                    <i class='bx bx-zoom-in'></i> Aumentar Texto
+                </button>
+                <button id="decrease-text" aria-label="Diminuir texto">
+                    <i class='bx bx-zoom-out'></i> Diminuir Texto
+                </button>
+                <button id="toggle-contrast" aria-label="Alto contraste">
+                    <i class='bx bx-adjust'></i> Alto Contraste
+                </button>
+                <button id="toggle-dark-mode" aria-label="Modo escuro">
+                    <i class='bx bx-moon'></i> Modo Escuro
+                </button>
+                <button id="reset-accessibility" aria-label="Resetar configurações">
+                    <i class='bx bx-reset'></i> Resetar
+                </button>
+                <button id="toggle-language" aria-label="Alternar idioma"></button>
+                    <i class='bx bx-globe'></i> Traduzir Site
+                </button>
+                <button id="toggle-libras" aria-label="Tradutor de Libras">
+                    <i class='bx bx-conversation'></i> VLibras
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <header id="navbar">
+        <a href="index.html" class="logo"><img src="imagem/logo.png" alt=""></a>
+
+        <ul class="navmenu">
+            <li><a href="index.html">home</a></li>
+            <li><a href="plantas.html">Flores</a></li>
+            <li><a href="#">contato</a></li>
+        </ul>
+
+        <div class="nav-icon">
+            <a href="busca.html"><i class='bx bx-search'></i></a>
+            <a href="login.html"><i class='bx bx-user'></i></a>
+            <a href="carrinho.html"><i class='bx bx-cart'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <div class="cart-container">
+        <h1 class="cart-title" style="color: white">Carrinho de Compras</h1>
+        
+        <div class="cart-items">
+            <!-- Exemplo de item no carrinho -->
+            <div class="cart-item">
+                <img src="imagem/1.jpg" alt="Costela-de-Adão">
+                <div class="item-details">
+                    <h3 style="color: white">Costela-de-Adão</h3>
+                    <p style="color: white">R$149,00</p>
+                    <div class="item-quantity">
+                        <button class="quantity-btn">-</button>
+                        <span style="color: white">1</span>
+                        <button class="quantity-btn">+</button>
+                        <button class="quantity-btn" style="margin-left: 10px;">Remover</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h2>Resumo do Pedido</h2>
+            <p>Subtotal: R$149,00</p>
+            <p>Frete: R$15,00</p>
+            <p><strong>Total: R$164,00</strong></p>
+            <a href="#" class="checkout-btn">Finalizar Compra</a>
+        </div>
+    </div>
+
+    <script src="accessibility.js"></script>
+</body>
+</html> 
