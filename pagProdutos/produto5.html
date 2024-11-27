@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/icons/sneakers.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bromélia (Bromeliaceae)</title>
+</head>
+
+<body class="product-page" data-body>
+    <header class="product-page__header">
+        <nav class="header__left">
+            <img class="header__hamburger-menu" src="./assets/icons/icon-menu.svg" alt="Acesso ao menu">
+            <img class="header__logo" src="./assets/icons/logo.svg" alt="Logotipo - Flora Frevo">
+            <ul class="product-page__header--nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/plantas.html">Flores</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <nav class="header__right">
+            <nav class="header__cart">
+                <nav class="header__cart--menu">
+                    <button class="open-cart--button" id="cartbutton">
+                        <img class="header__cart-img" id="cartbutton" src="./assets/icons/icon-cart.png"
+                            alt="Verificar conteúdos do carrinho de compras" title="Abrir carrinho">
+                        <span class="header__cart-count" id="cartbutton">0</span>
+                    </button>
+                    <ul class="header__cart-items" id="cartmenu">
+                        <div class="header__cart-empty">
+                            <span>Seu carrinho está vazio.</span>
+                            <p>Dê uma olhada nos nossos produtos e adicione, aqui, o que você gostar!</p>
+                        </div>
+                        <li class="header__cart-product">
+                            <nav class="cart-product__left">
+                                <a href="./index.html" class="item__name">Produto</a>
+                            </nav>
+                            <nav class="cart-product__right">
+                                <span class="item__price">Preço</span>
+                                <span class="item__quantity">Quantidade </span>
+                                <img class="header__cart-product--delete" id="delete"
+                                    src="./assets/icons/icon-delete.svg" alt="Remover item do carrinho"
+                                    title="Remover item do carrinho">
+                            </nav>
+                        </li>
+                        <nav class="cart__overview">
+                            <span>Total:</span>
+                            <span class="cart__total--sum">0</span>
+                        </nav>
+                    </ul>
+                </nav>
+            </nav>
+            <nav>
+                <img class="header__avatar" src="./assets/img/image-avatar.png" alt="Avatar do usuário">
+            </nav>
+        </nav>
+    </header>
+
+    <main class="product-page__main">
+        <div class="product-page__main-gallery">
+            <div class="main-gallery__container" data-enter>
+                <img class="main-gallery__demo" src="./assets/img/image-product-1.jpg"
+                    alt="Galeria do produto, Bromélia em vaso decorativo.">
+            </div>
+            <div class="main-gallery__container" data-enter hidden>
+                <img class="main-gallery__demo" src="./assets/img/image-product-2.jpg"
+                    alt="Galeria do produto, Bromélia vista de outro ângulo.">
+            </div>
+            <div class="main-gallery__container" data-enter hidden>
+                <img class="main-gallery__demo" src="./assets/img/image-product-3.jpg"
+                    alt="Galeria do produto, Bromélia em ambiente decorado.">
+            </div>
+            <div class="main-gallery__container" data-enter hidden>
+                <img class="main-gallery__demo" src="./assets/img/image-product-4.jpg"
+                    alt="Galeria do produto, Detalhe das folhas da Bromélia.">
+            </div>
+            <div class="main-gallery__row">
+                <div class="main-gallery__column" data-thumb>
+                    <img src="./assets/img/image-product-1-thumbnail.jpg" alt="Ampliar primeiro item da galeria."
+                        class="hover-shadow">
+                </div>
+                <div class="main-gallery__column" data-thumb>
+                    <img src="./assets/img/image-product-2-thumbnail.jpg" alt="Ampliar segundo item da galeria."
+                        class="hover-shadow">
+                </div>
+                <div class="main-gallery__column" data-thumb>
+                    <img src="./assets/img/image-product-3-thumbnail.jpg" alt="Ampliar terceiro item da galeria."
+                        class="hover-shadow">
+                </div>
+                <div class="main-gallery__column" data-thumb>
+                    <img src="./assets/img/image-product-4-thumbnail.jpg" alt="Ampliar quarto item da galeria."
+                        class="hover-shadow">
+                </div>
+            </div>
+
+            <div id="modal" class="product-page__main-modal" data-modal>
+                <!-- Modal content igual ao produto1.html -->
+            </div>
+        </div>
+
+        <div class="product-page__main__left-container">
+            <section class="product-page__main-description">
+                <h5>Flora Frevo</h5>
+                <h1 class="product-name">Bromélia (Bromeliaceae)</h1>
+                <p>
+                    Cores vibrantes e formas únicas para um toque de exotismo.
+                </p>
+                <div class="main-description__price">
+                    <div class="main-description__price-discount">
+                        <h2 class="product-price">110,00</h2>
+                    </div>
+                </div>
+            </section>
+
+            <div class="product-page__cart">
+                <div class="product-page__cart-counter">
+                    <img class="cart-counter--minus" src="./assets/icons/icon-minus.png"
+                        alt="Selecionar uma unidade a menos deste produto" title="Remover uma unidade">
+                    <p class="cart-counter__number">0</p>
+                    <img class="cart-counter--plus" src="./assets/icons/icon-add.png"
+                        alt="Selecionar uma unidade a mais deste produto" title="Adicionar uma unidade">
+                </div>
+                <button class="button"><img src="assets/icons/icon-cart.svg" alt>Adicionar ao Carrinnho</button>
+            </div>
+        </div>
+
+        <script src="./js/cart.js"></script>
+        <script src="./js/lightbox.js"></script>
+    </main>
+    <footer></footer>
+</body>
+
+</html> 
