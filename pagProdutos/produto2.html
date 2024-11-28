@@ -18,9 +18,37 @@
         rel="stylesheet">
 
     <title>Palmeira Areca (Dypsis lutescens)</title>
+
+    <link rel="stylesheet" href="../accessibility.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </head>
 
 <body class="product-page" data-body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <div id="google_translate_element"></div>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <header class="product-page__header">
         <nav class="header__left">
             <img class="header__hamburger-menu" src="./assets/icons/icon-menu.svg" alt="Acesso ao menu">
@@ -63,9 +91,23 @@
                     </ul>
                 </nav>
             </nav>
-            <nav>
-                <img class="header__avatar" src="./assets/img/image-avatar.png" alt="Avatar do usuário">
-            </nav>
+            <div class="nav-icon">
+                <button id="increase-text" aria-label="Aumentar texto">
+                    <i class='bx bx-zoom-in'></i>
+                </button>
+                <button id="decrease-text" aria-label="Diminuir texto">
+                    <i class='bx bx-zoom-out'></i>
+                </button>
+                <button id="toggle-contrast" aria-label="Alto contraste">
+                    <i class='bx bx-adjust'></i>
+                </button>
+                <button id="toggle-dark-mode" aria-label="Modo escuro">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <button id="reset-accessibility" aria-label="Resetar configurações">
+                    <i class='bx bx-reset'></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -139,6 +181,7 @@
 
         <script src="./js/cart.js"></script>
         <script src="./js/lightbox.js"></script>
+        <script src="../accessibility.js"></script>
     </main>
     <footer></footer>
 </body>

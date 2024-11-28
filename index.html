@@ -52,48 +52,6 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <!-- Menu de Acessibilidade (que já existe) -->
-    <div id="accessibility-menu" class="accessibility-menu">
-        <!-- ... resto do menu ... -->
-    </div>
-    <div id="accessibility-menu" class="accessibility-menu">
-        <button class="accessibility-toggle" aria-label="Abrir menu de acessibilidade">
-            <i class='bx bx-universal-access'></i>
-        </button>
-        <div class="accessibility-content">
-            <div class="accessibility-header">
-                <h3>Acessibilidade</h3>
-                <button class="close-accessibility" aria-label="Fechar menu de acessibilidade">
-                    <i class='bx bx-x'></i>
-                </button>
-            </div>
-            
-            <div class="accessibility-options">
-                <button id="increase-text" aria-label="Aumentar texto">
-                    <i class='bx bx-zoom-in'></i> Aumentar Texto
-                </button>
-                <button id="decrease-text" aria-label="Diminuir texto">
-                    <i class='bx bx-zoom-out'></i> Diminuir Texto
-                </button>
-                <button id="toggle-contrast" aria-label="Alto contraste">
-                    <i class='bx bx-adjust'></i> Alto Contraste
-                </button>
-                <button id="toggle-dark-mode" aria-label="Modo escuro">
-                    <i class='bx bx-moon'></i> Modo Escuro
-                </button>
-                <button id="reset-accessibility" aria-label="Resetar configurações">
-                    <i class='bx bx-reset'></i> Resetar
-                </button>
-                <button id="toggle-language" aria-label="Alternar idioma">
-                    <i class='bx bx-globe'></i> Traduzir Site
-                </button>
-                <button id="toggle-libras" aria-label="Tradutor de Libras">
-                    <i class='bx bx-conversation'></i> VLibras
-                </button>
-            </div>
-        </div>
-    </div>
-
     <header id="navbar">
         <a href="#" class="logo"><img src="imagem/logo.png" alt=""></a>
 
@@ -107,6 +65,23 @@
             <a href="busca.html"><i class='bx bx-search'></i></a>
             <a href="login.html"><i class='bx bx-user'></i></a>
             <a href="carrinho.html"><i class='bx bx-cart'></i></a>
+            
+            <!-- Botões de acessibilidade (removidos VLibras e Tradutor) -->
+            <button id="increase-text" aria-label="Aumentar texto">
+                <i class='bx bx-zoom-in'></i>
+            </button>
+            <button id="decrease-text" aria-label="Diminuir texto">
+                <i class='bx bx-zoom-out'></i>
+            </button>
+            <button id="toggle-contrast" aria-label="Alto contraste">
+                <i class='bx bx-adjust'></i>
+            </button>
+            <button id="toggle-dark-mode" aria-label="Modo escuro">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button id="reset-accessibility" aria-label="Resetar configurações">
+                <i class='bx bx-reset'></i>
+            </button>
 
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>

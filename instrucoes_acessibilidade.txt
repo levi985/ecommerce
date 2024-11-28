@@ -1,0 +1,114 @@
+INSTRUÇÕES PARA IMPLEMENTAÇÃO DE ACESSIBILIDADE
+
+1. ARQUIVOS NECESSÁRIOS
+   - accessibility.css
+   - accessibility.js
+   Certifique-se de que estes arquivos estejam na raiz do projeto.
+
+2. LINKS E SCRIPTS OBRIGATÓRIOS (adicionar no <head>)
+   ```html
+   <!-- CSS de Acessibilidade -->
+   <link rel="stylesheet" href="accessibility.css">
+   
+   <!-- BoxIcons (necessário para os ícones) -->
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+   
+   <!-- Scripts do Google Translate -->
+   <script type="text/javascript">
+       function googleTranslateElementInit() {
+           new google.translate.TranslateElement({
+               pageLanguage: 'pt',
+               includedLanguages: 'en,pt',
+               layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+           }, 'google_translate_element');
+       }
+   </script>
+   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   
+   <!-- Script do VLibras -->
+   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+   ```
+
+3. ELEMENTOS OBRIGATÓRIOS (adicionar logo após <body>)
+   ```html
+   <!-- Elemento do VLibras -->
+   <div vw class="enabled">
+       <div vw-access-button class="active"></div>
+       <div vw-plugin-wrapper>
+           <div class="vw-plugin-top-wrapper"></div>
+       </div>
+   </div>
+
+   <!-- Elemento do Google Translate -->
+   <div id="google_translate_element"></div>
+
+   <!-- Inicialização do VLibras -->
+   <script>
+       new window.VLibras.Widget('https://vlibras.gov.br/app');
+   </script>
+   ```
+
+4. BOTÕES DE ACESSIBILIDADE (adicionar dentro da div nav-icon)
+   ```html
+   <button id="increase-text" aria-label="Aumentar texto">
+       <i class='bx bx-zoom-in'></i>
+   </button>
+   <button id="decrease-text" aria-label="Diminuir texto">
+       <i class='bx bx-zoom-out'></i>
+   </button>
+   <button id="toggle-contrast" aria-label="Alto contraste">
+       <i class='bx bx-adjust'></i>
+   </button>
+   <button id="toggle-dark-mode" aria-label="Modo escuro">
+       <i class='bx bx-moon'></i>
+   </button>
+   <button id="reset-accessibility" aria-label="Resetar configurações">
+       <i class='bx bx-reset'></i>
+   </button>
+   ```
+
+5. SCRIPT DE ACESSIBILIDADE (adicionar antes do </body>)
+   ```html
+   <script src="accessibility.js"></script>
+   ```
+
+6. FUNCIONALIDADES IMPLEMENTADAS
+   - Aumentar/diminuir texto
+   - Modo escuro
+   - Alto contraste
+   - VLibras (tradutor de libras) sempre disponível no canto inferior direito
+   - Tradutor Google sempre disponível no canto inferior esquerdo
+   - Reset de configurações
+
+7. OBSERVAÇÕES IMPORTANTES
+   - Mantenha os IDs dos botões exatamente como especificado
+   - Certifique-se de que os caminhos dos arquivos estão corretos
+   - Não remova nenhum dos elementos obrigatórios
+   - Mantenha a ordem de carregamento dos scripts
+   - Teste todas as funcionalidades após a implementação
+
+8. ESTRUTURA DE ARQUIVOS RECOMENDADA
+   /seu-projeto
+   ├── index.html
+   ├── accessibility.css
+   ├── accessibility.js
+   └── outras-paginas.html
+
+9. VERIFICAÇÃO DE IMPLEMENTAÇÃO
+   - Verifique se todos os botões estão visíveis na nav
+   - Teste cada funcionalidade individualmente
+   - Verifique se as configurações persistem entre páginas
+   - Teste a responsividade em diferentes dispositivos
+   - Verifique se não há conflitos com outros scripts
+
+10. SOLUÇÃO DE PROBLEMAS COMUNS
+    - Se os botões não funcionam, verifique o console do navegador
+    - Se os ícones não aparecem, verifique o link do BoxIcons
+    - Se o tradutor não funciona, verifique a conexão com internet
+    - Se o VLibras não carrega, verifique o script do VLibras
+
+11. MANUTENÇÃO
+    - Mantenha os arquivos de acessibilidade atualizados
+    - Teste periodicamente todas as funcionalidades
+    - Atualize os scripts quando necessário
+    - Mantenha backup dos arquivos de acessibilidade
