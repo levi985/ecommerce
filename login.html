@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Login</title>
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +17,6 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="accessibility.css">
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="accessibility.css">
@@ -76,47 +75,9 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="accessibility.js"></script>
     </head>
 
-
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-
-    <div id="google_translate_element"></div>
-
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-
-    <div id="google_translate_element"></div>
-
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-
-    <div id="google_translate_element"></div>
-
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
     <body>
     <!-- Elemento do VLibras -->
     <div vw class="enabled">
@@ -133,43 +94,40 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <!-- Menu de Acessibilidade -->
-    <div id="accessibility-menu" class="accessibility-menu">
-        <button class="accessibility-toggle" aria-label="Abrir menu de acessibilidade">
-            <i class='bx bx-universal-access'></i>
-        </button>
-        <div class="accessibility-content">
-            <div class="accessibility-header">
-                <h3>Acessibilidade</h3>
-                <button class="close-accessibility" aria-label="Fechar menu de acessibilidade">
-                    <i class='bx bx-x'></i>
-                </button>
-            </div>
-            <div class="accessibility-options">
-                <button id="increase-text" aria-label="Aumentar texto">
-                    <i class='bx bx-zoom-in'></i> Aumentar Texto
-                </button>
-                <button id="decrease-text" aria-label="Diminuir texto">
-                    <i class='bx bx-zoom-out'></i> Diminuir Texto
-                </button>
-                <button id="toggle-contrast" aria-label="Alto contraste">
-                    <i class='bx bx-adjust'></i> Alto Contraste
-                </button>
-                <button id="toggle-dark-mode" aria-label="Modo escuro">
-                    <i class='bx bx-moon'></i> Modo Escuro
-                </button>
-                <button id="reset-accessibility" aria-label="Resetar configurações">
-                    <i class='bx bx-reset'></i> Resetar
-                </button>
-                <button id="toggle-language" aria-label="Alternar idioma"></button>
-                    <i class='bx bx-globe'></i> Traduzir Site
-                </button>
-                <button id="toggle-libras" aria-label="Tradutor de Libras">
-                    <i class='bx bx-conversation'></i> VLibras
-                </button>
-            </div>
+    <header id="navbar"></header>
+        <a href="#" class="logo"><img src="imagem/logo.png" alt=""></a>
+
+        <ul class="navmenu">
+            <li><a href="index.html">home</a></li>
+            <li><a href="plantas.html">Flores</a></li>
+            <li><a href="contato.html">contato</a></li>
+        </ul>
+
+        <div class="nav-icon">
+            <a href="busca.html"><i class='bx bx-search'></i></a>
+            <a href="login.html"><i class='bx bx-user'></i></a>
+            <a href="carrinho.html"><i class='bx bx-cart'></i></a>
+            
+            <!-- Botões de acessibilidade (removidos VLibras e Tradutor) -->
+            <button id="increase-text" aria-label="Aumentar texto">
+                <i class='bx bx-zoom-in'></i>
+            </button>
+            <button id="decrease-text" aria-label="Diminuir texto">
+                <i class='bx bx-zoom-out'></i>
+            </button>
+            <button id="toggle-contrast" aria-label="Alto contraste">
+                <i class='bx bx-adjust'></i>
+            </button>
+            <button id="toggle-dark-mode" aria-label="Modo escuro">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button id="reset-accessibility" aria-label="Resetar configurações">
+                <i class='bx bx-reset'></i>
+            </button>
+
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
-    </div>
+    </header>
 
     <div class="login-body">
         <div class="body-form">
@@ -198,7 +156,5 @@
 
     </div>
     <script src="script.js"></script>
-    <script src="accessibility.js"></script>
-<script src="../accessibility.js"></script><script src="accessibility.js"></script></body>
 
 </html>

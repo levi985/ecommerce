@@ -105,13 +105,33 @@
             <a href="index.html">Home</a>
             <a href="plantas.html">Catálogo</a>
             <a href="sobre.html">Sobre</a>
+
+            <!-- Botões de Acessibilidade -->
+        <div class="nav-icon">
+            <button id="increase-text" aria-label="Aumentar texto">
+                <i class='bx bx-zoom-in'></i>
+            </button>
+            <button id="decrease-text" aria-label="Diminuir texto">
+                <i class='bx bx-zoom-out'></i>
+            </button>
+            <button id="toggle-contrast" aria-label="Alto contraste">
+                <i class='bx bx-adjust'></i>
+            </button>
+            <button id="toggle-dark-mode" aria-label="Modo escuro">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button id="reset-accessibility" aria-label="Resetar configurações">
+                <i class='bx bx-reset'></i>
+            </button>
+        </div>
              </nav>
     </header>
 
     <!-- Seção de Contato -->
     <section class="contact">
-        <div class="center-text">
+        <div class="center-text" style="text-align: left; margin-left: -400px;">
             <h2>Entre em <span>Contato</span></h2>
+            
         </div>
 
         <!-- Informações de Contato -->
@@ -130,19 +150,21 @@
             </div>
         </div>
 
-        <!-- Formul��rio de Contato -->
-        <form action="enviar.php" method="post">
-            <label for="nome" style="color: white;">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+        <!-- Formulário de Contato -->
+        <form action="enviar.php" method="post" class="contact-form">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" id="nome" name="nome" required class="form-input">
 
-            <label for="email" style="color: white;">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" required class="form-input">
 
-            <label for="mensagem" style="color: white;">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <label for="mensagem" class="form-label">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required class="form-textarea"></textarea>
 
-            <button type="submit" class="main-btn" style="color: #87b233;">Enviar Mensagem</button>
+            <button type="submit" class="main-btn">Enviar Mensagem</button>
         </form>
+
+        
     </section>
 
     <!-- Rodapé -->
@@ -196,6 +218,37 @@
     </div>
     <script src="accessibility.js" defer></script>
     <script src="java.js"></script>
+
+    <!-- Estilização adicional -->
+    <style>
+        .form-label {
+            color: #333; /* Cor do texto do label */
+            font-weight: bold; /* Negrito para destaque */
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaçamento entre os campos */
+            max-width: 500px; /* Largura máxima do formulário */
+            margin: auto; /* Centraliza o formulário */
+        }
+        .form-input, .form-textarea {
+            padding: 10px; /* Espaçamento interno */
+            border: 1px solid #ccc; /* Borda do campo */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+        .main-btn {
+            background-color: #87b233; /* Cor do botão */
+            color: white; /* Cor do texto do botão */
+            padding: 10px; /* Espaçamento interno do botão */
+            border: none; /* Remove a borda padrão */
+            border-radius: 5px; /* Bordas arredondadas do botão */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+        }
+        .main-btn:hover {
+            background-color: #6a9a2a; /* Cor do botão ao passar o mouse */
+        }
+    </style>
 
 </body>
 

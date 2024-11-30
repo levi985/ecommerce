@@ -26,6 +26,86 @@
     
     <!-- Script do VLibras -->
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <style>
+        .cart-container {
+            margin-top: 100px;
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cart-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cart-items {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+        }
+
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            padding: 5px 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .cart-summary {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <!-- Elemento do VLibras -->
@@ -79,7 +159,34 @@
         </div>
     </header>
 
-    <!-- Resto do conteúdo do carrinho... -->
+    <div class="cart-container">
+        <h1 class="cart-title" style="color: white">Carrinho de Compras</h1>
+        
+        <div class="cart-items">
+            <!-- Exemplo de item no carrinho -->
+            <div class="cart-item">
+                <img src="imagem/1.jpg" alt="Costela-de-Adão">
+                <div class="item-details">
+                    <h3 style="color: white">Costela-de-Adão</h3>
+                    <p style="color: white">R$149,00</p>
+                    <div class="item-quantity">
+                        <button class="quantity-btn">-</button>
+                        <span style="color: white">1</span>
+                        <button class="quantity-btn">+</button>
+                        <button class="quantity-btn" style="margin-left: 10px;">Remover</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h2>Resumo do Pedido</h2>
+            <p>Subtotal: R$149,00</p>
+            <p>Frete: R$15,00</p>
+            <p><strong>Total: R$164,00</strong></p>
+            <a href="#" class="checkout-btn">Finalizar Compra</a>
+        </div>
+    </div>
 
     <script src="accessibility.js"></script>
 </body>
