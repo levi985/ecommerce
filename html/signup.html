@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="accessibility.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Script do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+</head>
+
+<body>
+<!-- Elemento do VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Elemento do Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <!-- Inicialização do VLibras -->
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Menu de Acessibilidade -->
+    <div id="accessibility-menu" class="accessibility-menu">
+        <button class="accessibility-toggle" aria-label="Abrir menu de acessibilidade">
+            <i class='bx bx-universal-access'></i>
+        </button>
+        <div class="accessibility-content">
+            <div class="accessibility-header">
+                <h3>Acessibilidade</h3>
+                <button class="close-accessibility" aria-label="Fechar menu de acessibilidade">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="accessibility-options">
+                <button id="increase-text" aria-label="Aumentar texto">
+                    <i class='bx bx-zoom-in'></i> Aumentar Texto
+                </button>
+                <button id="decrease-text" aria-label="Diminuir texto">
+                    <i class='bx bx-zoom-out'></i> Diminuir Texto
+                </button>
+                <button id="toggle-contrast" aria-label="Alto contraste">
+                    <i class='bx bx-adjust'></i> Alto Contraste
+                </button>
+                <button id="toggle-dark-mode" aria-label="Modo escuro">
+                    <i class='bx bx-moon'></i> Modo Escuro
+                </button>
+                <button id="reset-accessibility" aria-label="Resetar configurações">
+                    <i class='bx bx-reset'></i> Resetar
+                </button>
+                <button id="toggle-language" aria-label="Alternar idioma"></button>
+                    <i class='bx bx-globe'></i> Traduzir Site
+                </button>
+                <button id="toggle-libras" aria-label="Tradutor de Libras">
+                    <i class='bx bx-conversation'></i> VLibras
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="signup-body">
+        <div class="body-form">
+            <div class="container">
+                <div class="login-box">
+                    <div class="login-header">
+                        <h2>Cadastre-se!</h2>
+                    </div>
+                    <form id="signup-form">
+                        <div class="div-form">
+                            <div class="div1">
+
+                                <div class="input-container">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+                                </div>
+                                <!-- endereco -->
+
+                                <div class="div-form" id="cep-numero">
+                                    <div class="input-container" id="cep-input">
+                                        <label for="cep">CEP</label>
+                                        <input type="text" id="cep" placeholder="seu CEP" required>
+                                    </div>
+                                    <div class="input-container">
+                                        <label for="numero">Numero</label>
+                                        <input type="text" id="numero" placeholder="numero da Casa" required>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <label for="estado">Estado</label>
+                                    <input type="text" id="estado" placeholder="seu Estado" required>
+                                </div>
+                                <div class="input-container">
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" id="cidade" placeholder="sua Cidade" required>
+                                </div>
+                                <div class="input-container">
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" id="bairro" placeholder="seu Bairro" required>
+                                </div>
+                                <div class="input-container">
+                                    <label for="rua">Rua</label>
+                                    <input type="text" id="rua" placeholder="sua Rua" required>
+                                </div>
+
+                                <!-- -- -->
+                            </div>
+                            <div class="div2">
+                                <div class="input-container">
+                                    <label for="name">Nome</label>
+                                    <input type="text" id="name" placeholder="Digite seu nome" required>
+                                </div>
+                                <div class="input-container">
+                                    <label for="username">Sobrenome</label>
+                                    <input type="text" id="last-name" placeholder="Digite seu sobrenome" required>
+                                </div>
+                                <label id="sexolabel">Sexo: </label>
+                                <div class="sexo">
+                                    <label class="sexo-option">
+                                        <input type="radio" name="sexo" value="Feminino">
+                                        Feminino
+                                    </label>
+                                    <label class="sexo-option">
+                                        <input type="radio" name="sexo" value="Masculino">
+                                        Masculino
+                                    </label>
+                                </div>
+
+                                <div class="input-container">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Digite seu email" required>
+                                </div>
+                                <div class="input-container">
+                                    <label for="password">Senha</label>
+                                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                                </div>
+                                <button type="submit">Próximo</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="login-footer">
+                        <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="accessibility.js"></script>
+</body>
+
+</html>

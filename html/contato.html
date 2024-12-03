@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Script do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- Menu de Acessibilidade -->
+    <!-- Elemento do VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Elemento do Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <!-- Inicialização do VLibras -->
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Menu de Acessibilidade (que já existe) -->
+    <div id="accessibility-menu" class="accessibility-menu">
+        <!-- ... resto do menu ... -->
+    </div>
+    <div id="accessibility-menu" class="accessibility-menu">
+        <button class="accessibility-toggle" aria-label="Abrir menu de acessibilidade">
+            <i class='bx bx-universal-access'></i>
+        </button>
+        <div class="accessibility-content">
+            <div class="accessibility-header">
+                <h3>Acessibilidade</h3>
+                <button class="close-accessibility" aria-label="Fechar menu de acessibilidade">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
+            <div class="accessibility-options">
+                <button id="increase-text" aria-label="Aumentar texto">
+                    <i class='bx bx-zoom-in'></i> Aumentar Texto
+                </button>
+                <button id="decrease-text" aria-label="Diminuir texto">
+                    <i class='bx bx-zoom-out'></i> Diminuir Texto
+                </button>
+                <button id="toggle-contrast" aria-label="Alto contraste">
+                    <i class='bx bx-adjust'></i> Alto Contraste
+                </button>
+                <button id="toggle-dark-mode" aria-label="Modo escuro">
+                    <i class='bx bx-moon'></i> Modo Escuro
+                </button>
+                <button id="reset-accessibility" aria-label="Resetar configurações">
+                    <i class='bx bx-reset'></i> Resetar
+                </button>
+                <button id="toggle-language" aria-label="Alternar idioma">
+                    <i class='bx bx-globe'></i> Traduzir Site
+                </button>
+                <button id="toggle-libras" aria-label="Tradutor de Libras">
+                    <i class='bx bx-conversation'></i> VLibras
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="navbar">
+        <div class="logo">
+            <!--<a href="index.html"><img src="imagem/logo.png" alt="Logo"></a>-->
+        </div>
+        <nav class="navmenu">
+            <a href="index.html">Home</a>
+            <a href="plantas.html">Catálogo</a>
+            <a href="sobre.html">Sobre</a>
+
+            <!-- Botões de Acessibilidade -->
+        <div class="nav-icon">
+            <button id="increase-text" aria-label="Aumentar texto">
+                <i class='bx bx-zoom-in'></i>
+            </button>
+            <button id="decrease-text" aria-label="Diminuir texto">
+                <i class='bx bx-zoom-out'></i>
+            </button>
+            <button id="toggle-contrast" aria-label="Alto contraste">
+                <i class='bx bx-adjust'></i>
+            </button>
+            <button id="toggle-dark-mode" aria-label="Modo escuro">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button id="reset-accessibility" aria-label="Resetar configurações">
+                <i class='bx bx-reset'></i>
+            </button>
+        </div>
+             </nav>
+    </header>
+
+    <!-- Seção de Contato -->
+    <section class="contact">
+        <div class="center-text" style="text-align: left; margin-left: -400px;">
+            <h2>Entre em <span>Contato</span></h2>
+            
+        </div>
+
+        <!-- Informações de Contato -->
+        <div class="contact-info">
+            <div class="first-info">
+                <h4>Email</h4>
+                <p>FloraFrevo@gmail.com</p>
+            </div>
+            <div class="first-info">
+                <h4>Telefone</h4>
+                <p>(81) 1234-5678</p>
+            </div>
+            <div class="first-info">
+                <h4>Endereço</h4>
+                <p>Santo Amaro, Recife - PE</p>
+            </div>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <form action="enviar.php" method="post" class="contact-form">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" id="nome" name="nome" required class="form-input">
+
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" required class="form-input">
+
+            <label for="mensagem" class="form-label">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required class="form-textarea"></textarea>
+
+            <button type="submit" class="main-btn">Enviar Mensagem</button>
+        </form>
+
+        
+    </section>
+
+    <!-- Rodapé -->
+    <section class="contact">
+        <div class="contact-info">
+            <div class="first-info">
+                <img src="imagem/logo.png" alt="">
+
+                <p>1993 Tão Tão Distante, <br> Pernambuco Brasil - 4002-8922</p>
+                <p>81 97070-7069</p>
+                <p>florafrevot@gmail.com</p>
+
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+
+            <div class="second-info">
+                <h4>Suporte</h4>
+                <p>Contate-Nos</p>
+                <p>Sobre A Página</p>
+                <p>Guia De Tamanho</p>
+                <p>Compras E Devoluções</p>
+                <p>Privacidade</p>
+            </div>
+
+            <div class="third-info">
+                <h4>Comprar</h4>
+                <p>Tipos de Plantas</p>
+                <p>Tamanho e Estilo de Crescimento</p>
+                <p>Necessidade de Luz e Uso</p>
+            </div>
+
+            <div class="fourth-info">
+                <h4>EMPRESA</h4>
+                <p>Sobre</p>
+                <p>Blog</p>
+                <p>Afiliado</p>
+                <p>Conecte-Se</p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="end-text">
+        <p>Copyright © @2024. Todos os direitos reservados. Projetado por Kauã Júlio.</p>
+    </div>
+    <script src="accessibility.js" defer></script>
+    <script src="java.js"></script>
+
+    <!-- Estilização adicional -->
+    <style>
+        .form-label {
+            color: #333; /* Cor do texto do label */
+            font-weight: bold; /* Negrito para destaque */
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaçamento entre os campos */
+            max-width: 500px; /* Largura máxima do formulário */
+            margin: auto; /* Centraliza o formulário */
+        }
+        .form-input, .form-textarea {
+            padding: 10px; /* Espaçamento interno */
+            border: 1px solid #ccc; /* Borda do campo */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+        .main-btn {
+            background-color: #87b233; /* Cor do botão */
+            color: white; /* Cor do texto do botão */
+            padding: 10px; /* Espaçamento interno do botão */
+            border: none; /* Remove a borda padrão */
+            border-radius: 5px; /* Bordas arredondadas do botão */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+        }
+        .main-btn:hover {
+            background-color: #6a9a2a; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+
+</body>
+
+</html>
