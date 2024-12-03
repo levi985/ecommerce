@@ -84,6 +84,36 @@
             color: #4CAF50;
             font-weight: bold;
         }
+
+        .filter-container {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .filter-group {
+            margin-bottom: 10px;
+        }
+
+        .filter-group label {
+            margin-right: 10px;
+        }
+
+        .filter-group select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .apply-filters-button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -144,6 +174,31 @@
             <button class="search-button">Buscar</button>
         </div>
 
+        <!-- Área de Filtros -->
+        <div class="filter-container">
+            <h4>Filtros</h4>
+            <div class="filter-group">
+                <label for="price-filter">Faixa de Preço:</label>
+                <select id="price-filter">
+                    <option value="all">Todos</option>
+                    <option value="0-50">R$0 - R$50</option>
+                    <option value="51-100">R$51 - R$100</option>
+                    <option value="101-150">R$101 - R$150</option>
+                    <option value="151-200">R$151 - R$200</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="category-filter">Categoria:</label>
+                <select id="category-filter">
+                    <option value="all">Todas</option>
+                    <option value="tropical">Tropicais</option>
+                    <option value="ornamental">Ornamentais</option>
+                    <!-- Adicione mais categorias conforme necessário -->
+                </select>
+            </div>
+            <button class="apply-filters-button">Aplicar Filtros</button>
+        </div>
+
         <div class="search-results">
             <!-- Resultados serão inseridos aqui via JavaScript -->
         </div>
@@ -153,26 +208,52 @@
 
     <script src="accessibility.js"></script>
     <script>
-        // Simulação de busca
         const searchButton = document.querySelector('.search-button');
         const searchInput = document.querySelector('.search-input');
         const searchResults = document.querySelector('.search-results');
+        const applyFiltersButton = document.querySelector('.apply-filters-button');
+        const priceFilter = document.getElementById('price-filter');
+        const categoryFilter = document.getElementById('category-filter');
 
         const products = [
-            { name: 'Costela-de-Adão', price: 'R$60 - R$149', image: 'imagem/1.jpg' },
-            { name: 'Palmeira Areca', price: 'R$50 - R$159', image: 'imagem/2.jpg' },
-            { name: 'Filodendro', price: 'R$39 - R$128', image: 'imagem/3.jpg' },
+            { name: 'Costela-de-Adão', price: 60, category: 'tropical', image: 'imagem/1.jpg' },
+            { name: 'Palmeira Areca', price: 50, category: 'ornamental', image: 'imagem/2.jpg' },
+            { name: 'Filodendro', price: 39, category: 'tropical', image: 'imagem/3.jpg' },
             // Adicione mais produtos conforme necessário
         ];
 
         searchButton.addEventListener('click', () => {
             const searchTerm = searchInput.value.toLowerCase();
-            const filteredProducts = products.filter(product => 
-                product.name.toLowerCase().includes(searchTerm)
-            );
-
+            const filteredProducts = filterProducts(searchTerm);
             displayResults(filteredProducts);
         });
+
+        applyFiltersButton.addEventListener('click', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredProducts = filterProducts(searchTerm);
+            displayResults(filteredProducts);
+        });
+
+        function filterProducts(searchTerm) {
+            return products.filter(product => {
+                const matchesSearch = product.name.toLowerCase().includes(searchTerm);
+                const matchesPrice = filterByPrice(product.price);
+                const matchesCategory = filterByCategory(product.category);
+                return matchesSearch && matchesPrice && matchesCategory;
+            });
+        }
+
+        function filterByPrice(price) {
+            const selectedPrice = priceFilter.value;
+            if (selectedPrice === 'all') return true;
+            const [min, max] = selectedPrice.split('-').map(Number);
+            return price >= min && price <= max;
+        }
+
+        function filterByCategory(category) {
+            const selectedCategory = categoryFilter.value;
+            return selectedCategory === 'all' || category === selectedCategory;
+        }
 
         function displayResults(results) {
             searchResults.innerHTML = '';
@@ -181,7 +262,7 @@
                     <div class="product-card">
                         <img src="${product.image}" alt="${product.name}">
                         <h3>${product.name}</h3>
-                        <p>${product.price}</p>
+                        <p>R$${product.price}</p>
                     </div>
                 `;
                 searchResults.innerHTML += productCard;
