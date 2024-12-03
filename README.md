@@ -65,3 +65,30 @@ Flora Frevo é um e-commerce especializado em plantas tropicais, com foco em esp
 - 📞 Telefone: 4002-8922
 - 📍 Endereço: 1993 Tão Tão Distante, Pernambuco Brasil
 
+## 🎨 Paleta de Cores
+
+| Cor | Hexadecimal | Uso |
+|-----|-------------|-----|
+| Verde Principal | `#00A149` | Elementos principais, botões e destaques |
+| Verde Secundário | `#008000` | Hover e elementos interativos |
+| Verde Claro | `#90EE90` | Backgrounds suaves e elementos decorativos |
+| Branco | `#FFFFFF` | Fundo principal e textos em áreas escuras |
+| Preto | `#000000` | Textos principais e contornos |
+| Cinza Claro | `#F5F5F5` | Backgrounds secundários |
+| Cinza Escuro | `#333333` | Textos secundários |
+| Vermelho | `#FF0000` | Alertas e notificações |
+
+### Variações de Transparência
+- Verde Principal (70%): `rgba(0, 161, 73, 0.7)`
+- Verde Principal (50%): `rgba(0, 161, 73, 0.5)`
+- Verde Principal (30%): `rgba(0, 161, 73, 0.3)`
+
+## 👨‍💻 Autores
+
+- Desenvolvido por Levi Henrique
+- Design por Kauã Júlio
+
+## 📄 Licença
+
+Copyright © 2024. Todos os direitos reservados.
+
