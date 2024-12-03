@@ -18,7 +18,6 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="accessibility.css">
     <script type="text/javascript">
@@ -95,7 +94,7 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <header id="navbar"></header>
+    <header id="navbar">
         <a href="#" class="logo"><img src="imagem/logo.png" alt=""></a>
 
         <ul class="navmenu">
@@ -107,7 +106,7 @@
             <a href="login.html"><i class='bx bx-user'></i></a>
             <a href="carrinho.html"><i class='bx bx-cart'></i></a>
             
-            <!-- Botões de acessibilidade (removidos VLibras e Tradutor) -->
+            <!-- Botões de acessibilidade -->
             <button id="increase-text" aria-label="Aumentar texto">
                 <i class='bx bx-zoom-in'></i>
             </button>
@@ -144,26 +143,9 @@
                         
                         <button type="button" id="loginButton">Entrar</button> 
                     </form>
-                    <div class="login-footer"></div>
+                    <div class="login-footer">
                         <p>Não tem uma conta? <a href="signup.html">Cadastre-se</a></p>
                         <p>É usuário? <a href="login.html">Clique aqui para fazer login</a></p>
-                    </div>
-                    
-                    <script>
-                        document.getElementById('loginButton').addEventListener('click', function () {
-                            const username = document.getElementById('username').value;
-                            const password = document.getElementById('password').value;
-                    
-                            if (username && password) {
-                                // Redirecionar para a página de administrador
-                                window.location.href = 'adm.html'; // Aqui você coloca o link da página de administrador
-                            } else {
-                                alert("Por favor, preencha todos os campos.");
-                            }
-                        });
-                    </script>
-                    
-                    <div class="login-footer">
                     </div>
                 </div>
             </div>

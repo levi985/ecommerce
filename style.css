@@ -446,3 +446,50 @@ header.sticky {
         display: flex;
     }
 }
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .navmenu {
+        display: none; /* Esconder menu padrão */
+    }
+
+    .nav-icon {
+        display: flex;
+    }
+
+    .search-input {
+        width: 70%;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+    .search-input {
+        width: 90%;
+    }
+
+    .product-card {
+        padding: 5px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .filter-container {
+        padding: 5px;
+    }
+
+    .filter-group {
+        margin-bottom: 5px;
+    }
+
+    .apply-filters-button {
+        padding: 5px 10px;
+    }
+}

@@ -301,3 +301,53 @@ section {
       display: flex;
   }
 }
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha logo e navmenu */
+    padding: 20px 10%; /* Adiciona padding para centralizar */
+    background-color: #886443; /* Cor de fundo */
+}
+
+.logo img {
+    max-width: 200px; /* Ajuste o tamanho da logo */
+    height: auto;
+}
+
+.navmenu {
+    display: flex;
+    flex-grow: 1; /* Permite que o menu ocupe o espaço disponível */
+    justify-content: center; /* Centraliza os itens do menu */
+}
+
+.navmenu a {
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Adiciona margem à esquerda para empurrar para a direita */
+}
+
+.nav-icon button {
+    background: none;
+    border: none;
+    color: #2c2c2c;
+    font-size: 22px;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 5px;
+    transition: all .42s ease;
+}
+
+.nav-icon button:hover {
+    color: #87b233;
+    transform: scale(1.1);
+}
