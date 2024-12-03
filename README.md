@@ -65,8 +65,3 @@ Flora Frevo é um e-commerce especializado em plantas tropicais, com foco em esp
 - 📞 Telefone: 4002-8922
 - 📍 Endereço: 1993 Tão Tão Distante, Pernambuco Brasil
 
-## 🗂️ Estrutura do Projeto
-
-```
-ecommerce/
-├
