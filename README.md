@@ -16,12 +16,25 @@ Flora Frevo é um e-commerce especializado em plantas tropicais, com foco em esp
 - 👤 Área do usuário
 - ⭐ Sistema de avaliações
 - 📱 Design responsivo
+- 🤖 Chatbot assistente
 - ♿ Recursos de acessibilidade:
   - VLibras (Tradutor de Libras)
   - Google Translate (Português/Inglês)
   - Ajuste de tamanho de texto
   - Alto contraste
   - Modo escuro
+
+## 🛠 Chatbot Flora Bot
+
+O Flora Bot é um assistente virtual que ajuda os usuários com:
+- Informações sobre produtos
+- Preços e promoções
+- Dúvidas sobre entregas
+- Formas de pagamento
+- Cuidados com plantas
+- Suporte ao cliente
+
+Para interagir com o Flora Bot, basta clicar no ícone de chat no canto inferior direito da tela.
 
 ## 🛠️ Tecnologias Utilizadas
 
