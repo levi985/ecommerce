@@ -2,8 +2,11 @@
 
 ![Logo Flora Frevo](imagem/logo.png)
 
+## 📝 Visualização
+Acesse o projeto em funcionamento: [Flora Frevo](https://levi985.github.io/ecommerce/)
+
 ## 📝 Descrição
-Flora Frevo é um e-commerce especializado em plantas tropicais, com foco em espécies típicas do nordeste brasileiro. O projeto oferece uma experiência de compra intuitiva e acessível para os amantes de plantas.
+Flora Frevo é um e-commerce especializado em plantas tropicais, com foco em espécies típicas do nordeste brasileiro. O projeto oferece uma experiência de compra intuitiva e acessível para os amantes de plantas, trazendo a beleza da flora tropical para sua casa.
 
 ## ✨ Funcionalidades
 
@@ -33,34 +36,37 @@ Flora Frevo é um e-commerce especializado em plantas tropicais, com foco em esp
 ## 🎯 Seções Principais
 
 1. **Home**: Apresentação da coleção "Tropicanas"
-2. **Produtos em Alta**: Exibição das plantas mais populares
-3. **Avaliações de Clientes**: Feedback dos compradores
-4. **Próximas Coleções**: Prévia das futuras coleções
-   - Verde Exótico
-   - Essência Tropical
-   - Brisa do Nordeste
+2. **Flores**: Catálogo completo de produtos
+3. **Contato**: Formulário e informações para contato
+4. **Produtos em Alta**: Exibição das plantas mais populares
+5. **Avaliações de Clientes**: Feedback dos compradores
+6. **Próximas Coleções**: Prévia das futuras coleções
+   - Verde Exótico (29 Set 2024)
+   - Essência Tropical (29 Out 2024)
+   - Brisa do Nordeste (29 Nov 2024)
 
 ## 🌿 Produtos Disponíveis
 
-- Costela-de-Adão (Monstera deliciosa)
-- Palmeira Areca (Dypsis lutescens)
-- Filodendro (Philodendron spp.)
-- Bananeira Ornamental (Musa spp.)
-- Bromélia (Bromeliaceae)
-- Samambaia (Nephrolepis exaltata)
-- Cicadinha (Zamia furfuracea)
-- Antúrio (Anthurium andraeanum)
+| Produto | Faixa de Preço |
+|---------|---------------|
+| Costela-de-Adão (Monstera deliciosa) | R$60 - R$149 |
+| Palmeira Areca (Dypsis lutescens) | R$50 - R$159 |
+| Filodendro (Philodendron spp.) | R$39 - R$128 |
+| Bananeira Ornamental (Musa spp.) | R$99 - R$298 |
+| Bromélia (Bromeliaceae) | R$31 - R$110 |
+| Samambaia (Nephrolepis exaltata) | R$27 - R$80 |
+| Cicadinha (Zamia furfuracea) | R$49 - R$169 |
+| Antúrio (Anthurium andraeanum) | R$89 - R$299 |
 
 ## 📱 Contato
 
-- Email: florafrevot@gmail.com
-- Telefone: (81) 97070-7069
-- Endereço: 1993 Tão Tão Distante, Pernambuco Brasil - 4002-8922
+- 📧 Email: florafrevot@gmail.com
+- 📞 WhatsApp: (81) 97070-7069
+- 📞 Telefone: 4002-8922
+- 📍 Endereço: 1993 Tão Tão Distante, Pernambuco Brasil
 
-## 👨‍💻 Autor
+## 🗂️ Estrutura do Projeto
 
-Desenvolvido por Levi Henrique e Kauã Júlio
-
-## 📄 Licença
-
-Copyright © 2024. Todos os direitos reservados. 
+```
+ecommerce/
+├
